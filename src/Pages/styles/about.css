@@ -1,0 +1,13 @@
+/* About Page Styles */
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    color: #666;
+    text-align: center;
+    margin: 10px 20px;
+}

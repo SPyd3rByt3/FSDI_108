@@ -5,10 +5,10 @@ function Navbar() {
         <div>
             <nav>
                 <div className="logo">
-                    <a href="">Log-In   </a>
-                    <a href="">Search   </a>
-                    <a href="">Subscribe    </a>
-                    <a href="">Menu </a>
+                    <a href="/">Home   </a>
+                    <a href="/catalog">Catalog    </a>
+                    <a href="/contact">Contact   </a>
+                    <a href="/admin">Admin   </a>
                 </div>
             </nav>
         </div>

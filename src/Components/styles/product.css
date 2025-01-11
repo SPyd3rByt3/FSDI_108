@@ -5,7 +5,7 @@
     padding: 10px;
 
     height: 100;
-    width: 50;
+    min-width: 50;
 
     display: inline-block;
     margin:0 10px 10px 0;
@@ -21,11 +21,13 @@
 }
 
 .product img {
-    width: 100;
+    width: 200px; /* Set desired width */
+    height: 200px; /* Set desired height */
+    object-fit: cover; /* Maintain aspect ratio */
 }
 
 .product hover img {
-    transform: skewX(-2deg);
+    transform: skewX(-4deg);
 }
 
 .product h3 {
@@ -33,4 +35,9 @@
     padding-top: 3px;
     color: rgb(9, 116, 128);
     margin: 0
+}
+
+.product .parent {
+    display: flex;
+    justify-content: space-around;
 }

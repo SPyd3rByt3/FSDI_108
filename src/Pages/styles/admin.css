@@ -1,0 +1,47 @@
+.admin {
+    padding-top: 12px;
+}
+
+.admin h1 {
+    text-align: center;
+    color: rgb(24, 85, 85);
+}
+
+admin .parent {
+    display: flex;
+}
+
+.admin .prod-form {
+    width: 500;
+    border: 1px solid #333;
+    background-color: white;
+}
+
+.admin .coupon-form {
+    width: 400px;
+    border: 1px solid #333;
+    background-color: white;
+    padding: 10px;
+    text-align: left;
+    border-radius: 4px;
+}
+
+.admin.coupon-form label {
+    text-align: left;
+}
+
+.admin.coupon-form h3 {
+    text-align: center;
+    color: darkcyan
+}
+
+.admin.coupon-form button {
+    text-align: center;
+    vertical-align: bottom;
+    border-style: ridge;
+}
+
+.admin .controls {
+    text-align: center;
+    padding-top: 8px;
+}

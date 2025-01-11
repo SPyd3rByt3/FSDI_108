@@ -1,5 +1,5 @@
 import "./styles/product.css";
-import QuantityPicker from "./QuantityPicker";
+import QuantityPicker from "./QuantityPicker.jsx";
 
 function Product(props) {
     return (
@@ -7,8 +7,12 @@ function Product(props) {
             <img src={props.data.image} alt='' />
             <h3>{props.data.title}</h3>
 
-            <label>$99.99</label>
+        
+            <p>Price: ${props.data.price}</p>
+        <div className="parent">
+            <label className="">$99.99</label>
             <label>${props.data.price}</label>
+        </div>
 
             <QuantityPicker />
         </div>

@@ -4,28 +4,36 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Catalog from './Pages/Catalog';
 import Home from './Pages/Home';
+import About from './Pages/About';
+import Admin from './Pages/Admin';
 // import Footer from './Components/styles/footer';
 
 // import Home from './pages/Home';
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import  "bootstrap/dist/js/bootstrap.min.js";
+import './Pages/styles/about.css';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import "bootstrap/dist/js/bootstrap.min.js";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <h1>greetings world from React!</h1>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <h1>greetings world from React!</h1>
 
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/catalog" component={Catalog} />
-      </Switch>
+        <Routes>
+          <Route path="/"  element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
 
-      <Footer></Footer>
-    </div>
-    );
-  }
+        <Footer></Footer>
+      </div>
+    </BrowserRouter>
+  );
+}
 
 export default App;
 // <input type="text" value={name} onChange={handleChange} />
