@@ -1,11 +1,19 @@
-.navbar-menu{
+/* .navbar-menu */
+.logo{
     padding: 5px;
     display: flex;
     justify-content: space-evenly; 
-    height: 60px;
+    height: 33px;
     align-items: center;
+    /* color-scheme: yellow green olive goldenrod; */
+    background-color: rgb(115, 57, 3);
 }
 
+/* .logo{
+    width: 100px;
+    color-scheme: green yellow olive;
+    justify-content: space-evenly;
+} */
 
 a{
     text-transform: uppercase;

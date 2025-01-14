@@ -1,11 +1,15 @@
 import "./styles/product.css";
 import QuantityPicker from "./QuantityPicker.jsx";
+import { useContext } from "react";
+import GlobalContext from "../state/globalContext.js";
 
 function Product(props) {
 
+    const globalAdd = useContext(GlobalContext).addProductToCart;
+
     function onAdd() {
         console.log("Test");
-        
+        globalAdd(props.data);
     }
     return (
         <div className="product">
@@ -17,7 +21,7 @@ function Product(props) {
 
         <div className="parent">
             <label className="">$99.99</label>
-            <label>${props.data.price}</label>
+            <label>${props.data.price.toFixed(2)}</label>
         </div>
 
         <div className="parent">

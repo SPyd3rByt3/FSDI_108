@@ -6,6 +6,7 @@ import Catalog from './Pages/Catalog';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Admin from './Pages/Admin';
+import GlobalProvider from './state/globalProvider';
 // import Footer from './Components/styles/footer';
 
 // import Home from './pages/Home';
@@ -14,9 +15,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './Pages/styles/about.css';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import "bootstrap/dist/js/bootstrap.min.js";
+import Cart from './Pages/Cart';
 
 function App() {
   return (
+    <GlobalProvider>
     <BrowserRouter>
       <div className="App">
         <Navbar />
@@ -27,11 +30,13 @@ function App() {
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
 
         <Footer></Footer>
       </div>
     </BrowserRouter>
+    </GlobalProvider>
   );
 }
 

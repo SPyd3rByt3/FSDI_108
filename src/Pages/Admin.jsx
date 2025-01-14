@@ -55,6 +55,7 @@ function Admin() {
 
     function saveCoupon() {
         console.log(coupon);
+        
         let copy = [ ...allCoupons ];
         copy.push(coupon);
         setAllCoupons(copy);
@@ -65,6 +66,7 @@ function Admin() {
 
     function saveProduct() {
         console.log(product);
+
         let copy = [ ...allProducts ];
         copy.push(product);
         setAllProducts(copy);
