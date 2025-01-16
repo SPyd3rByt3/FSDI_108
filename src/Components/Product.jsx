@@ -1,15 +1,23 @@
+import { useState } from 'react';
 import "./styles/product.css";
 import QuantityPicker from "./QuantityPicker.jsx";
 import { useContext } from "react";
 import GlobalContext from "../state/globalContext.js";
 
 function Product(props) {
-
+    const [quantity, setQuantity] = useState(1);
     const globalAdd = useContext(GlobalContext).addProductToCart;
 
     function onAdd() {
-        console.log("Test");
-        globalAdd(props.data);
+        let fixedProduct = {...props.data};
+        fixedProduct.quantity = quantity;
+        // console.log("Test");
+        globalAdd(fixedProduct);
+    }
+
+    function handleQuantity(qty) {
+        // console.log(qty);
+        setQuantity(qty);
     }
     return (
         <div className="product">
@@ -20,12 +28,12 @@ function Product(props) {
             <p>Price: ${props.data.price}</p>
 
         <div className="parent">
-            <label className="">$99.99</label>
+            <label className="">{(props.data.price * quantity)} </label>
             <label>${props.data.price.toFixed(2)}</label>
         </div>
 
         <div className="parent">
-            <QuantityPicker />
+            <QuantityPicker onChange={handleQuantity} />
             <button className='btn btn-sm btn-primary' onClick={onAdd}>Add</button>
             {/* <button onClick={() => props.onAdd(props.data)}>Add</button> */}
             </div>

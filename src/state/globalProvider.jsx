@@ -1,5 +1,7 @@
-import { useState } from 'react';
+
+import { useContext, useState } from 'react';
 import GlobalContext from './globalContext.js';
+
 
 // reminder: ALWAYS Capitalize a FUNCTION!!! eg: GLobalProvider NOT globalProvider etc.
 function GlobalProvider(props){

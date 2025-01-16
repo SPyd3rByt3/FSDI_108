@@ -16,21 +16,21 @@ const cart = useContext(GlobalContext).cart;
         <div>
             <nav>
                 <div className="logo">
-                    <a href="/">Home   </a>
-                    <a href="/catalog">Catalog    </a>
-                    <a href="/contact">Contact   </a>
-                    <a href="/admin">Admin   </a>
-                    <a href="/cart">Cart  </a>
+                    <Link to="/">Home   </Link>
+                    <Link to="/catalog">Catalog    </Link>
+                    <Link to="/contact">Contact   </Link>
+                    <Link to="/admin">Admin   </Link>
+                    <Link to="/cart">Cart  </Link>
                 </div>
                 {/* <div className="nav-right"></div> */}
 
             <div className="d-flex" role="search">
-                <button className='btn btn-outline-dark'>{user.name}</button>
+                <button className='btn btn-outline-dark btn-user'>{user.name}</button>
 
             <Link className='btn btn-outline-success' to="/cart">
-                {cart.length}
+        <span class="badge rounded-pill text-bg-warning">{cart.length}</span>
             </Link>
-                
+
             </div>
             </nav>
         </div>
